@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+
+	<script type="text/javascript">
+		
+		// opcion 2  con []
+		//convertir un array a texto
+		array1 = new Array('rojo', 'azul', 'amarillo', 'verde')
+		document.write(array1.join('--'));
+		//convertir un texto a array
+		texto = 'rojo, azul, amarillo, verde';
+		var array = texto.split(',');
+		document.write('<br>');
+		for (i in array) {
+			document.write(`posición: ${i} -  contenido: ${array[i]} <br>`);
+		}
+
+
+		//concatena arrays
+		var arraya = new Array('rojo', 'azul', 'amarillo', 'verde');
+		var arrayb = new Array('lila', 'rosa');
+		var resultado = arraya.concat(arrayb);
+		document.write(resultado);
+
+		//añade elementos al array 
+		document.write('<br>');
+		var arrayc = new Array('rojo', 'azul', 'amarillo', 'verde');
+		arrayc.push('blanco', 'negro');
+		document.write(arrayc);
+		document.write('<br>');
+		//eliminar último elmentos (pop)
+		arrayc.pop();
+		document.write(arrayc);
+		document.write('<br>');
+		//eliminar el primer elemento del array (shift)
+		arrayc.shift();
+		document.write(arrayc);
+		document.write('<br>');
+		//inserta elementos al principio del array
+		arrayc.unshift('purpura', 'lila');
+		document.write(arrayc);
+		document.write('<br>');
+		//ordenar el array en orden creciente
+		arrayc.sort()
+		document.write(arrayc)
+		document.write('<br>');
+		//invierte el orden del array
+		arrayc.reverse();
+		document.write(arrayc);
+		document.write('<br>');
+		//reemplaza elementos del array desde una posición del mismo (el 2 indica los elementos que reemplaza  y el 3 la posición)
+		arrayc.splice(3,2,'bblanco', 'nnegro') //desde - número de elementos
+		document.write(arrayc)
+		document.write('<br>');
+		//reemplaza el elemento de posición 2 y añade los elementos que se hayan indicado (llila, marron) 
+		arrayc.splice (2,1,'llila', 'marrón');
+		document.write(arrayc);
+		document.write('<br>');
+		//borra un elemento (1) en la posición 2
+		arrayc.splice (2,1);
+		document.write(arrayc);
+		document.write('<br>');
+
+		//insertar elementos sin sustituir elementos
+		arrayc.splice (2,0,'naranja','oro');
+		document.write(arrayc);
+		document.write('<br>');
+
+		//obtener un segundo array a partir de un primero	
+		array1 = arrayc.slice(0,3) //desde, hasta sin incluirlo
+		document.write(arrayc);
+		document.write('<br>');
+		document.write(array1);
+		document.write('<br>');
+
+		//comprueba si un elemento se encuentra dentro de un array
+		document.write(arrayc.includes('naranja'));
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
